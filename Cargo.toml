@@ -1,0 +1,17 @@
+[package]
+name = "FreeRTOS-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+freertos-rust = {path = "FreeRTOS-rust/freertos-rust"}
+cortex-m = "0.7.7"
+cortex-m-rt = { version="0.7.2" }
+panic-halt = "0.2.0"
+embedded-hal="0.2.5"
+stm32f3xx-hal = {version = "0.9.1", features = ["stm32f303xc"]}
+
+[build-dependencies]
+freertos-cargo-build = {path = "FreeRTOS-rust/freertos-cargo-build"}
