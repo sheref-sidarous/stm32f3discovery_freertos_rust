@@ -1,9 +1,23 @@
 This is an example project on how to use FreeRTOS-rust on (STM32F3Discovery)[https://www.st.com/en/evaluation-tools/stm32f3discovery.html]
 The project comes with 2 tasks, each blinking an LED on board.
 
+# How to build
+* Check out FreeRTOS and FreeRTOS-rust which are referenced as git submodules
+```
+$ git submodule init && git submodule update
+```
+* Use Nighly rust with arm thumbv7em-none-eabihf target enabled
+```
+$ rustup toolchain add nightly-x86_64-unknown-linux-gnu
+$ rustup target add thumbv7em-none-eabihf
+```
+* Build via cargo
+```
+$ cargo build
+```
 
 ## How to flash and run:
-I'm using openocd and gdb to load and run the software.
+I'm using openocd and gdb to load and run the compiled image.
 
 * Have OpneOCD and gdb-multiatch installed, this was done on my ubuntu via 
 ```
@@ -16,11 +30,11 @@ $ openocd -f openocd.cfg
 ```
 * Then, on another terminal launch gdb-multiarch
 ```
-$ gdb-multiarch target/thumbv7em-none-eabihf/debug/FreeRTOS-rust -ex "target remote localhost:3333"
+$ gdb-multiarch target/thumbv7em-none-eabihf/debug/stm32f3discovery_freertos_rust -ex "target remote localhost:3333"
 ```
-where target/thumbv7em-none-eabihf/debug/FreeRTOS-rust is the compiled image
+where target/thumbv7em-none-eabihf/debug/stm32f3discovery_freertos_rust is the compiled image
 
-* Finally from inside gdb terminal you can flash the new image via
+* Finally, from inside gdb terminal you can flash and run the new image via
 ```
 (gdb) load
 Loading section .vector_table, size 0x194 lma 0x8000000

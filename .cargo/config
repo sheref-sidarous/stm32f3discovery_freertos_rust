@@ -1,6 +1,5 @@
 [target.thumbv7em-none-eabihf]
 rustflags = ["-C", "link-args=-Tlink.x -Map=mapfile.map"]
-runner = "gdb-multiarch -x openocd.gdb"
 
 [build]
 target = "thumbv7em-none-eabihf"

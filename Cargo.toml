@@ -1,5 +1,5 @@
 [package]
-name = "FreeRTOS-rust"
+name = "stm32f3discovery_freertos_rust"
 version = "0.1.0"
 edition = "2021"
 
