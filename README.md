@@ -47,4 +47,4 @@ Transfer rate: 21 KB/sec, 4427 bytes/write.
 Continuing.
 ```
 
-Those instructions are mostly copied from (The Rust Embedded book)[https://docs.rust-embedded.org/book/start/hardware.html#debugging], check it out for more details, explanation and troubleshooting.
+Those instructions are mostly copied from [The Rust Embedded book](https://docs.rust-embedded.org/book/start/hardware.html#debugging), check it out for more details, explanation and troubleshooting.
