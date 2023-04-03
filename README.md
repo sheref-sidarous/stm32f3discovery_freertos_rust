@@ -1,12 +1,12 @@
-This is an example project on how to use FreeRTOS-rust on (STM32F3Discovery)[https://www.st.com/en/evaluation-tools/stm32f3discovery.html]
+This is an example project on how to use [FreeRTOS-rust](https://github.com/lobaro/FreeRTOS-rust) on [STM32F3Discovery](https://www.st.com/en/evaluation-tools/stm32f3discovery.html)
 The project comes with 2 tasks, each blinking an LED on board.
 
-# How to build
+## How to build
 * Check out FreeRTOS and FreeRTOS-rust which are referenced as git submodules
 ```
 $ git submodule init && git submodule update
 ```
-* Use Nighly rust with arm thumbv7em-none-eabihf target enabled
+* Use Nighly rust with `thumbv7em-none-eabihf` target enabled
 ```
 $ rustup toolchain add nightly-x86_64-unknown-linux-gnu
 $ rustup target add thumbv7em-none-eabihf
